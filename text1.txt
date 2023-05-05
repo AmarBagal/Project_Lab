@@ -1,0 +1,52 @@
+package MyShop;
+
+public class Flower {
+	
+	String name;
+	int no_of_pices;
+	int no_of_petals;
+	double price;
+	double total_price;
+	
+	public Flower() {
+		this.name="No Name";
+		this.no_of_petals=0;
+		this.no_of_pices=0;
+		this.price=0.0;
+		this.total_price=0.0;
+		
+				
+	}
+	public Flower(String name,int no_of_pices,int no_of_petals,double price) {
+		
+			this.name=name;
+			this.no_of_petals=no_of_petals;
+			this.no_of_pices=no_of_pices;
+			this.price=price;
+			this.total_price=price*no_of_pices;
+			
+			
+	
+	
+	}
+	public int calculate_discount() {
+	if(total_price>2000) {
+		return 200;
+	}
+	else {
+		return 100;
+	}
+	
+	}
+	public void display() {
+		System.out.println("Flower Name="+name);
+		System.out.println("Number of petals="+no_of_petals);
+		System.out.println("Number of pices="+no_of_pices);
+		System.out.println("Price per pices="+price);
+		System.out.println("Total Price="+total_price);
+		System.out.println("Discount="+calculate_discount());
+		System.out.println("Price after Discount="+(total_price-calculate_discount()));
+		
+	}
+
+}
